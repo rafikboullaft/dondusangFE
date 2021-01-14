@@ -1,0 +1,270 @@
+<section class="content">
+  <div class="container-fluid">
+    <!-- row -->
+    <div class="row">
+      <div class="col-12">
+        <!-- jQuery Knob -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Gloubules rouges
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                  class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6 col-md-3 text-center" >
+                <input type="text" class="knob" attr.value={{gr_aplus_len}} data-min="0" data-max="10" data-width="90" data-height="90" data-fgColor="#3c8dbc">
+
+                <div class="knob-label">{{gr_aplus_len}} A+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{info.aa}} data-width="90" data-height="90" data-fgColor="#f56954">
+
+                <div class="knob-label">A-</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{gr_bplus?.length}} data-min="0" data-max="10" data-width="90"
+                       data-height="90" data-fgColor="#00a65a">
+
+                <div class="knob-label">{{gr_bplus?.length}} B+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{gr_bmoins?.length}} data-width="90" data-height="90" data-fgColor="#00c0ef">
+
+                <div class="knob-label">B-</div>
+              </div>
+              <!-- ./col -->
+              
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{gr_abplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">AB+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{gr_abmoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">AB-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{gr_oplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">O+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{gr_omoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">O-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+<!-- plasma -->
+    <div class="row">
+      <div class="col-12">
+        <!-- jQuery Knob -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              Plasma
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                  class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plasma_aplus?.length}} data-width="90" data-height="90" data-fgColor="#3c8dbc">
+
+                <div class="knob-label">A+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plasma_amoins?.length}} data-width="90" data-height="90" data-fgColor="#f56954">
+
+                <div class="knob-label">A-</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plasma_bplus?.length}} data-min="-150" data-max="150" data-width="90"
+                       data-height="90" data-fgColor="#00a65a">
+
+                <div class="knob-label">B+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plasma_bmoins?.length}} data-width="90" data-height="90" data-fgColor="#00c0ef">
+
+                <div class="knob-label">B-</div>
+              </div>
+              <!-- ./col -->
+              
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plasma_abplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">AB+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plasma_abmoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">AB-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plasma_oplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">O+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plasma_omoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">O-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+<!-- les plaquetes -->
+    <!-- row -->
+    <div class="row">
+      <div class="col-12">
+        <!-- jQuery Knob -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="far fa-chart-bar"></i>
+              les plaquetes
+            </h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                  class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_aplus?.length}} data-width="90" data-height="90" data-fgColor="#3c8dbc">
+
+                <div class="knob-label">A+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_amoins?.length}} data-width="90" data-height="90" data-fgColor="#f56954">
+
+                <div class="knob-label">A-</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_bplus?.length}} data-min="-150" data-max="150" data-width="90"
+                       data-height="90" data-fgColor="#00a65a">
+
+                <div class="knob-label">B+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 col-md-3 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_bmoins?.length}} data-width="90" data-height="90" data-fgColor="#00c0ef">
+
+                <div class="knob-label">B-</div>
+              </div>
+              <!-- ./col -->
+              
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_abplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">AB+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_abmoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">AB-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <div class="row">
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_oplus?.length}} data-width="90" data-height="90" data-fgColor="#932ab6">
+
+                <div class="knob-label">O+</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-6 text-center">
+                <input type="text" class="knob" attr.value={{plaquetes_omoins?.length}} data-width="90" data-height="90" data-fgColor="#39CCCC">
+
+                <div class="knob-label">O-</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+  </div><!-- /.container-fluid -->
+</section>
+

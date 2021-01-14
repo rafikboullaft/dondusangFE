@@ -1,0 +1,11 @@
+<p>reservation works!</p>
+<input type="text" [(ngModel)]="si7ati" name="si7ati">
+<button (click)="rechercheDonneur(si7ati)">les dates disponibles pour vous</button>
+<div *ngIf="donneur !=null ;else elseBlock">
+    <h5>Bonjour {{donneur.nom}} {{donneur.prenom}}</h5>
+<p>vous pouvez reserver apres {{ladatederesrvation}}</p>
+
+</div>
+<ng-template #elseBlock>
+{{lemessage}}
+</ng-template>

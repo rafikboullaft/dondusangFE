@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">stcok de toutes les produis</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example2" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+              
+              <th>code paquet</th>
+              <th>produit</th>
+              <th>Groupe Sanguin</th>
+              <th>Date de don</th>
+              <th>Expired</th>
+              <th>Action</th> 
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor = "let paquet of paquets">
+               
+                <td>{{paquet.codePaquet}}</td>
+                <td>{{paquet.type}}</td>
+                <td>{{paquet.groupeSanguin}}</td>
+                <td>{{paquet.dateOfDonation}}</td>
+                <td>{{paquet.expired}}</td>
+                <td>
+                  <button (click) = "updatePaquet(paquet.id)" class="btn btn-info">Modifier</button>
+                  <button (click) = "deletePaquet(paquet.id)" class="btn btn-danger">Supprimer</button>
+                 
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+    </div>
+</div>
+<app-reservation></app-reservation>
