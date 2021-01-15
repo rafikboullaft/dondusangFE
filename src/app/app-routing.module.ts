@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'statistique', component: StockDuProduitComponent},
   {path: 'update-paquet/:id', component: UpdatePaquetComponent},
   {path: 'home', component: HomeDonneurComponent},
-  {path: 'donnerlesnag', component:DonnerlesangComponent},
-  {path: 'reserver', component:ReservationComponent}
+  {path: 'home/donnerlesnag', component:DonnerlesangComponent},
+  {path: 'home/reserver', component:ReservationComponent}
 ];
 
 @NgModule({
