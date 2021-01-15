@@ -1,13 +1,13 @@
 export class Donneur {
     id: number;
-    nom: String ;
-    prenom : String;
-    cin:String;
-    telephone:String;
-    adresse:String;
+    nom: string ;
+    prenom : string;
+    cin:string;
+    telephone:string;
+    adresse:string;
     date_naissance:  Date;
-    sexe : String;
+    sexe : string;
     dernier_don: Date ;
     etat_sante:Boolean ; // Good-true // Not Good= false
-    groupe_sanguain:String;
+    groupe_sanguain:string;
 }

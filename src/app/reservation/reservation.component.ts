@@ -27,11 +27,10 @@ export class ReservationComponent implements OnInit {
     
   }
   rechercheDonneur(){
-    this.datesdispo.push(this.serverparsi7ati);
+    
     this.trouverladate();
     this.datesdispo.push(this.serverparsi7ati);
-    this.serverparsi7ati2.date=this.donneur.dernier_don;
-    this.datesdispo.push(this.serverparsi7ati);
+    this.serverparsi7ati2.message=this.donneur.nom;
     this.datesdispo.push(this.serverparsi7ati2);
   }
   trouverladate(){
