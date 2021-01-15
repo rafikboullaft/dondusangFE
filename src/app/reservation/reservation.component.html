@@ -1,11 +1,15 @@
-<p>reservation works!</p>
-<input type="text" [(ngModel)]="si7ati" name="si7ati">
-<button (click)="rechercheDonneur(si7ati)">les dates disponibles pour vous</button>
-<div *ngIf="donneur !=null ;else elseBlock">
-    <h5>Bonjour {{donneur.nom}} {{donneur.prenom}}</h5>
-<p>vous pouvez reserver apres {{ladatederesrvation}}</p>
-
+<h1>Reservation</h1>
+<div class="form-group">
+<input type="text" [(ngModel)]="serverparsi7ati.message" >
+<button (click)="rechercheDonneur()">les dates disponibles pour vous</button>
 </div>
-<ng-template #elseBlock>
-{{lemessage}}
-</ng-template>
+<h3>les dates disponibles</h3>
+<ul calss="list-groupe">
+    <li class="list-groupe-item" *ngFor="let d of datesdispo">
+        {{d.message}},
+        <span class="badge">{{d.date|date:'dd/mm/yyyy:HH:mm:ss'}} </span>
+        {{donneur.nom}}
+    </li>
+
+</ul>
+

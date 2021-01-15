@@ -4,6 +4,7 @@ import { CreatePaquetComponent } from './create-paquet/create-paquet.component';
 import { DonnerlesangComponent } from './donnerlesang/donnerlesang.component';
 import { HomeDonneurComponent } from './home-donneur/home-donneur.component';
 import {PaquetListComponent} from './paquet-list/paquet-list.component'
+import { ReservationComponent } from './reservation/reservation.component';
 import { StockDuProduitComponent } from './stock-du-produit/stock-du-produit.component';
 import { UpdatePaquetComponent } from './update-paquet/update-paquet.component';
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'statistique', component: StockDuProduitComponent},
   {path: 'update-paquet/:id', component: UpdatePaquetComponent},
   {path: 'home', component: HomeDonneurComponent},
-  {path: 'home/donnerlesnag', component:DonnerlesangComponent}
+  {path: 'donnerlesnag', component:DonnerlesangComponent},
+  {path: 'reserver', component:ReservationComponent}
 ];
 
 @NgModule({
