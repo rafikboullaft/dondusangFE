@@ -10,11 +10,51 @@
         <span class="badge">{{d.date|date:'dd/mm/yyyy:HH:mm:ss'}} </span>
     </li>
 </ul>
-<div *ngIf="donneur!=null; else loggedOut">
-    Welcome back, friend.
+<div *ngIf="donneur!=null ; else loggedOut">
+    <form (ngSubmit)="ajouterReservation()">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label>Faite une promesse de don</label>
+    
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                  </div>
+                  <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" [(ngModel)]="Calendrier.rdv" name="dateOfDonation" placeholder="yyyy-mm-dd">
+                </div>
+                <!-- /.input group -->
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-md-6">
+              
+              
+              <div class="form-group">
+                <label>votre code SI7ATI: {{donneur.cin}}</label>
+                <select class="form-control select2" disabled="disabled" style="width: 100%;" [(ngModel)]="Calendrier.donneur_id" name="isExpired">
+                    <option selected="selected">http://localhost:8080/donneurs/{{donneur.id}}</option>
+                    <option>true</option>
+                  </select>
+              </div>
+              
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+          <!-- /.row -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Reserver</button>
+        </div>
+    </form>
 </div>
   
-  <ng-template #loggedOut>
-    Please friend, login.
-  </ng-template>
+<ng-template #loggedOut>
+    Bienvenue sur votre espace de Reservation
+</ng-template>
 

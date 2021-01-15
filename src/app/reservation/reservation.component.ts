@@ -1,4 +1,7 @@
 import { Component, OnInit, Optional } from '@angular/core';
+import { Router } from '@angular/router';
+import { Calendrier } from '../calendrier';
+import { CalendrierService } from '../calendrier.service';
 import { Donneur } from '../donneur';
 import { DonneurService } from '../donneur.service';
 
@@ -10,13 +13,14 @@ import { DonneurService } from '../donneur.service';
 export class ReservationComponent implements OnInit {
   donneur:Donneur;
   donneurs:Donneur[];
-
-  datesdispo=[
+  Calendrier:Calendrier=new Calendrier();
+  count:0;
   
-    ];
+
+  datesdispo=[];
   serverparsi7ati={date:null,message:""}
   serverparsi7ati2={date:null,message:""}
-  constructor(private DonneurService:DonneurService) { }
+  constructor(private DonneurService:DonneurService,private CalendrierService:CalendrierService,private router:Router) { }
 
   ngOnInit(): void {  
   }
@@ -32,10 +36,9 @@ export class ReservationComponent implements OnInit {
       this.donneur=data;
       console.log(this.donneur);
       
-      if(this.donneur.sexe=="homme"){
+      if(this.donneur.sexe!="femme"){
         this.serverparsi7ati2.message="Mr."+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
-
-        this.serverparsi7ati2.date=this.donneur.dernier_don.setDate(this.donneur.dernier_don.getDate()+4*7);
+        this.serverparsi7ati2.date=new Date(this.donneur.dernier_don).getTime() + 5;
        }
       else{
         this.serverparsi7ati2.message="Madame "+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
@@ -46,14 +49,26 @@ export class ReservationComponent implements OnInit {
       }
      
   },error=>console.log(error));
-    // if(this.donneur.sexe=="homme"){
+  }
 
-    //   this.ladatederesrvation= new Date(this.donneur.dernier_don.getTime() + (1000 * 60 * 60 * 24 * 8 *7));
-    // }
-    // else{
-    //   this.ladatederesrvation= new Date(this.donneur.dernier_don.getTime() + (1000 * 60 * 60 * 24 * 12 *7));
+  saveReservation(){
+  
+    this.CalendrierService.createReservation(this.Calendrier).subscribe(data=>{
+      console.log(data);
+      //this.goToPaquetList();
+    },
+    error => console.log(error)
+    
+    );
+  }
+  goToreserver(){
+    this.router.navigate(['/home']);
+  }
+  ajouterReservation(){
+  
+    this.saveReservation();
+    this.goToreserver();
 
-    // }
   }
 
 
