@@ -10,4 +10,6 @@ export class Donneur {
     dernier_don: Date ;
     etat_sante:Boolean ; // Good-true // Not Good= false
     groupe_sanguain:string;
+    _links;
+
 }

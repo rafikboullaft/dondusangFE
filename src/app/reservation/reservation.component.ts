@@ -9,33 +9,42 @@ import { DonneurService } from '../donneur.service';
 })
 export class ReservationComponent implements OnInit {
   donneur:Donneur;
-  lemessage:String;
-  ladatederesrvation:Date;
-  si7ati:string;
+  donneurs:Donneur[];
 
   datesdispo=[
-    {date:new Date(), message:"bienvenue"},
-    {date:new Date(), message:"bienvenue"}
   
     ];
   serverparsi7ati={date:null,message:""}
   serverparsi7ati2={date:null,message:""}
   constructor(private DonneurService:DonneurService) { }
 
-  ngOnInit(): void {
-    
-    
+  ngOnInit(): void {  
   }
+
   rechercheDonneur(){
-    
     this.trouverladate();
-    this.datesdispo.push(this.serverparsi7ati);
-    this.serverparsi7ati2.message=this.donneur.nom;
-    this.datesdispo.push(this.serverparsi7ati2);
+    this.datesdispo[0]=this.serverparsi7ati2;
   }
   trouverladate(){
     return this.DonneurService.rechercheDonneur(this.serverparsi7ati.message).subscribe(data=>{
+      if(data!=null){
+      console.log(data);
       this.donneur=data;
+      console.log(this.donneur);
+      
+      if(this.donneur.sexe=="homme"){
+        this.serverparsi7ati2.message="Mr."+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
+
+        this.serverparsi7ati2.date=this.donneur.dernier_don.setDate(this.donneur.dernier_don.getDate()+4*7);
+       }
+      else{
+        this.serverparsi7ati2.message="Madame "+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
+        this.serverparsi7ati2.date=new Date(this.donneur.dernier_don).getTime() + 5;
+      }
+      }else{
+        this.serverparsi7ati2.message="votre code SI7ATI incorecte ou c'est votre premier fois";
+      }
+     
   },error=>console.log(error));
     // if(this.donneur.sexe=="homme"){
 

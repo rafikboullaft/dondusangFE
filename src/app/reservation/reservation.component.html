@@ -10,6 +10,11 @@
         <span class="badge">{{d.date|date:'dd/mm/yyyy:HH:mm:ss'}} </span>
     </li>
 </ul>
-<h3>Mr</h3>
-
+<div *ngIf="donneur!=null; else loggedOut">
+    Welcome back, friend.
+</div>
+  
+  <ng-template #loggedOut>
+    Please friend, login.
+  </ng-template>
 
