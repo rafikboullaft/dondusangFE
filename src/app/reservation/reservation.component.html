@@ -1,13 +1,30 @@
-<h1>Reservation</h1>
-<div class="form-group">
-<input type="text" [(ngModel)]="serverparsi7ati.message" >
-<button (click)="rechercheDonneur()">les dates disponibles pour vous</button>
+<h1 style="text-align: center;"> (SEHATI) أدخل رمز الخاص بك</h1>
+<div class="form-group" style="margin-left: 15px;" >
+<input type="text" class="form-control" [(ngModel)]="serverparsi7ati.message" style="margin-bottom: 5px; width: 50%;" >
+<button class="btn btn-primary" (click)="rechercheDonneur()" style="margin-top: 5px; width: 50%;"> انقذ حياة </button>
 </div>
-<h3>les dates disponibles</h3>
-<ul calss="list-groupe">
+
+<div class="card-body">
+
+<ul calss="list-groupe" style="list-style:none;">
     <li class="list-groupe-item" *ngFor="let d of datesdispo">
-        {{d.message}},
-        <span class="badge">{{d.date|date:'dd/mm/yyyy:HH:mm:ss'}} </span>
+        
+        <!-- <span class="badge"> </span> -->
+        <div  *ngIf="donneur!=null ; else si7atidemande">
+          <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-check"></i> {{d.message}}</h5>
+            {{d.date.toLocaleString()}}
+          </div>
+        </div>
+        <ng-template #si7atidemande>
+          <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-exclamation-triangle"></i>إذا كانت هذه هي المرة الأولى لك ، قم بزيارة موقع لتحاقن الدم وانقذ حياة</h5>
+            {{d.message}}
+          </div>
+        </ng-template>
+        
     </li>
 </ul>
 <div *ngIf="donneur!=null ; else loggedOut">
@@ -55,6 +72,39 @@
 </div>
   
 <ng-template #loggedOut>
-    Bienvenue sur votre espace de Reservation
+  <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h5><i class="icon fas fa-ban"></i> أهمية التبرع بالدم بالنسبة للمؤسسات الصحية</h5>
+   <p>توفر هذه العملية خدمة استعجالية لتحاقن الدم وتسد حاجيات المراكز الاستشفائية والمستشفيات والمصحات من مشتقات الدم خصوصا بالنسبة ل:</p>
+    <li>
+      للمرضى المصابين بأمراض الدم الوراثية والأورام السرطانية
+    </li>
+    <li>
+      مرضى القصور الكلوي
+    </li>
+    <li>
+      مرضى فقر الدم للبحر الأبيض المتوسط (تلاسيميا)
+    </li>
+    <li>
+      رضى فقر الدم المنجلي (Drépanocytose)
+    </li>
+  </div>
+  <div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h5><i class="icon fas fa-check"></i> ماهي فوائد التبرع بالدم ؟</h5>
+    <li>
+      يساعد على تنشيط الدورة الدموية
+    </li>
+    <li>
+      يساعد على تنشيط النخاع العظمي وإنتاج خلايا دم جديدة (كريات حمراء وكريات بيضاء وصفائح دموية) بحيث تصبح قادرة على حمل كمية أكبر من الأوكسجين إلى أعضاء الجسم الرئيسية
+    </li>
+    <li>
+      يساعد على التخلص من بعض الحديد والذي إذا ما ارتفع مستواه بالدم يزيد من مخاطر الإصابة بأمراض القلب، كما يعجِّل بأكسدة الكوليسترول ويزيد من تلف الشرايين الصغيرة
+    </li>
+    <li>
+      الأشخاص الذين يتبرعون بدمهم مرة واحدة على الأقل كل سنة هم أقل عرضة للإصابة بأمراض الدورة الدموية و سرطان الدم
+    </li>
+  </div>
+  
 </ng-template>
 

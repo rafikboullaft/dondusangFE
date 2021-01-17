@@ -35,21 +35,23 @@ export class ReservationComponent implements OnInit {
       console.log(data);
       this.donneur=data;
       console.log(this.donneur);
-      
+      this.serverparsi7ati2.date=new Date(this.donneur.dernier_don);
       if(this.donneur.sexe!="femme"){
         this.serverparsi7ati2.message="Mr."+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
-        this.serverparsi7ati2.date=new Date(this.donneur.dernier_don).getTime() + 5;
+        this.serverparsi7ati2.date=new Date(this.serverparsi7ati2.date.getTime() + (1000 * 60 * 60 * 24 * 8 * 7));
        }
       else{
         this.serverparsi7ati2.message="Madame "+this.donneur.prenom+" vous pouvez donez le sang apres cette date:";
-        this.serverparsi7ati2.date=new Date(this.donneur.dernier_don).getTime() + 5;
+        this.serverparsi7ati2.date=new Date(this.serverparsi7ati2.date.getTime() + (1000 * 60 * 60 * 24 * 12 * 7));
       }
       }else{
-        this.serverparsi7ati2.message="votre code SI7ATI incorecte ou c'est votre premier fois";
+        this.serverparsi7ati2.message="كود SI7ATI الخاص بك غير صحيح";
       }
      
   },error=>console.log(error));
   }
+
+
 
   saveReservation(){
   

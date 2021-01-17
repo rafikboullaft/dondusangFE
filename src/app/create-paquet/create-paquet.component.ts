@@ -31,8 +31,6 @@ export class CreatePaquetComponent implements OnInit {
   ajouterPaquet(){
     console.log(this.paquet);
     this.savePaquet();
-    
-   
   }
 
 }

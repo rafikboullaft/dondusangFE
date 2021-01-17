@@ -8,10 +8,6 @@ import { StockDuProduitComponent } from './stock-du-produit/stock-du-produit.com
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { StockByDaysComponent } from './stock-by-days/stock-by-days.component';
-import { DirectChatComponent } from './direct-chat/direct-chat.component';
-import { TodolistComponent } from './todolist/todolist.component';
-import { MapCardComponent } from './map-card/map-card.component';
-import { SolidGraphComponent } from './solid-graph/solid-graph.component';
 import { CalendreirComponent } from './calendreir/calendreir.component';
 import { ClientSidebarComponent } from './client-sidebar/client-sidebar.component';
 import { PaquetListComponent } from './paquet-list/paquet-list.component';
@@ -23,7 +19,10 @@ import { HomeDonneurComponent } from './home-donneur/home-donneur.component';
 import { DonnerlesangComponent } from './donnerlesang/donnerlesang.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { SelectionnerRendezvousComponent } from './selectionner-rendezvous/selectionner-rendezvous.component';
-
+import { EditComponent } from './Donneurs/edit/edit.component';
+import { CreateComponent } from './Donneurs/create/create.component';
+import { IndexComponent } from './Donneurs/index/index.component';
+import { ViewComponent } from './Donneurs/view/view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +30,6 @@ import { SelectionnerRendezvousComponent } from './selectionner-rendezvous/selec
     NavbarComponent,
     SidebarComponent,
     StockByDaysComponent,
-    DirectChatComponent,
-    TodolistComponent,
-    MapCardComponent,
-    SolidGraphComponent,
     CalendreirComponent,
     ClientSidebarComponent,
     PaquetListComponent,
@@ -43,7 +38,11 @@ import { SelectionnerRendezvousComponent } from './selectionner-rendezvous/selec
     HomeDonneurComponent,
     DonnerlesangComponent,
     ReservationComponent,
-    SelectionnerRendezvousComponent
+    SelectionnerRendezvousComponent,
+    EditComponent,
+    CreateComponent,
+    IndexComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

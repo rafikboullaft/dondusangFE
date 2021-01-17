@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row mb-2">
+    <div class="col-sm-6">
+      <h1 class="m-0 text-dark">La liste des Donneurs</h1>
+    </div><!-- /.col -->
+    <div class="col-sm-6">
+      <ol class="breadcrumb float-sm-right">
+
+        <li> <button class="btn btn-success" routerLink="/nouveauDonneur">Ajouter un donneur</button></li>
+      </ol>
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+</div><!-- /.container-fluid -->
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">La liste des donneurs</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <table id="example2" class="table table-bordered table-hover" *ngIf="donneurs">
+          <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th> Dernier date de don</th>
+            <th>Etat</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor = "let donneur of donneurs._embedded.donneurs">
+
+            <td>{{donneur.nom}}</td>
+            <td>{{donneur.prenom}}</td>
+            <td>{{donneur.dernier_don}}</td>
+
+            <td>{{donneur.etat_sante}}</td>
+            <td>
+              <a href="#" [routerLink]="['/donneur/', donneur.id, 'view']" class="btn btn-info">View</a>&nbsp;
+              <a href="#" [routerLink]="['/donneur/', donneur.id, 'edit']" class="btn btn-primary">Edit</a>&nbsp;
+              <button   (click)="deleteDonneur(donneur.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+  </div>
+</div>
+

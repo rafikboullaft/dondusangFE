@@ -1,137 +1,226 @@
- <!-- START ALERTS AND CALLOUTS -->
- <h5 class="mt-4 mb-2">bienvenue</h5>
- <div class="row">
-   <div class="col-md-6">
-     <div class="card card-default">
-       <div class="card-header">
-         <h3 class="card-title">
-           <i class="fas fa-exclamation-triangle"></i>
-           Alerts
-         </h3>
+<!-- START ALERTS AND CALLOUTS -->
+<div class="row">
+   <div class="col-lg-3 col-6">
+     <!-- small box -->
+     <div class="small-box bg-info">
+       <div class="inner">
+         <h3>236482</h3>
+
+         <p>donneurs en 2020</p>
        </div>
-       <!-- /.card-header -->
-       <div class="card-body">
-         <div class="alert alert-danger alert-dismissible">
-           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-           <h5><i class="icon fas fa-ban"></i> Alert!</h5>
-           Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my
-           entire
-           soul, like these sweet mornings of spring which I enjoy with my whole heart.
-         </div>
-         <div class="alert alert-info alert-dismissible">
-           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-           <h5><i class="icon fas fa-info"></i> Alert!</h5>
-           Info alert preview. This alert is dismissable.
-         </div>
-         <div class="alert alert-warning alert-dismissible">
-           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-           <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
-           Warning alert preview. This alert is dismissable.
-         </div>
-         <div class="alert alert-success alert-dismissible">
-           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-           <h5><i class="icon fas fa-check"></i> Alert!</h5>
-           Success alert preview. This alert is dismissable.
-         </div>
+       <div class="icon">
+         <i class="ion ion-stats-bars"></i>
        </div>
-       <!-- /.card-body -->
+
      </div>
-     <!-- /.card -->
    </div>
-   <!-- /.col -->
-
-   <div class="col-md-6">
-     <div class="card card-default">
-       <div class="card-header">
-         <h3 class="card-title">
-           <i class="fas fa-bullhorn"></i>
-           Callouts
-         </h3>
+   <!-- ./col -->
+   <div class="col-lg-3 col-6">
+     <!-- small box -->
+     <div class="small-box bg-success">
+       <div class="inner">
+         <h3>+2000<sup style="font-size: 20px"></sup></h3>
+         <p>Nouvaeu donneurs</p>
        </div>
-       <!-- /.card-header -->
-       <div class="card-body">
-         <div class="callout callout-danger">
-           <h5>Puis-je donner le sang</h5>
-           <p>Avant de vous rendre dans l’un de nos sites ou collectes, répondez à ces quelques questions pour savoir si vous pouvez donner votre sang.</p>
-           <button class="btn btn-primary">les criteres</button>
-         </div>
-         <div class="callout callout-info">
-           <h5>Faites une promesse de don</h5>
-           <a routerLink="reserver" routerLinkActive="active" class="nav-link">reserver</a>
-         </div>
-         <div class="callout callout-warning">
-           <h5>visiter le stock de sang</h5>
-
-           <p>viseter</p>
-           <a routerLink="donnerlesnag" class="btn btn-primary">stock</a>
-
-         </div>
+       <div class="icon">
+         <i class="ion ion-person-add"></i>
        </div>
-       <!-- /.card-body -->
      </div>
-     <!-- /.card -->
    </div>
-   <!-- /.col -->
+   <!-- ./col -->
+   <div class="col-lg-3 col-6">
+     <!-- small box -->
+     <div class="small-box bg-danger">
+       <div class="inner">
+         <h3>moins de 10 jours</h3>
+
+         <p>de resereve</p>
+       </div>
+       <div class="icon">
+         <i class="ion ion-bag"></i>
+       </div>
+     </div>
+   </div>
+   <!-- ./col -->
+   <div class="col-lg-3 col-6">
+     <!-- small box -->
+     <div class="small-box bg-warning">
+       <div class="inner">
+         <h3>18 ans age minimum</h3>
+
+         <p>4 semaines de delai entre deux dons de plaquetes</p>
+       </div>
+       <div class="icon">
+         <i class="ion "></i>
+       </div>
+
+     </div>
+   </div>
+   <!-- ./col -->
  </div>
- <h5 class="mt-4 mb-2">chifres important</h5>
- <div class="row">
-    <div class="col-lg-3 col-6">
-      <!-- small box -->
-      <div class="small-box bg-info">
-        <div class="inner">
-          <h3>236482</h3>
+<!-- /.row -->
+<div class="container-fluid">
+  <div class="row mb-2">
+    <div class="col-sm-6">
+      <h1 class="m-0 text-dark">Bienvenue sur votre espace "Donneur"</h1>
+    </div><!-- /.col -->
+    <div class="col-sm-6">
+      <ol class="breadcrumb float-sm-right">
 
-          <p>donneurs en 2020</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-bag"></i>
-        </div>
-        
-      </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-      <!-- small box -->
-      <div class="small-box bg-success">
-        <div class="inner">
-          <h3>+2000<sup style="font-size: 20px"></sup></h3>
-          <p>Nouvaeu donneurs</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-stats-bars"></i>
-        </div>
-      </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-      <!-- small box -->
-      <div class="small-box bg-warning">
-        <div class="inner">
-          <h3>moins de 10 jours</h3>
+        <li> <button class="btn btn-success" routerLink="/home/reserver">Reserver un rendezvous</button></li>
+      </ol>
+      <ol class="breadcrumb float-sm-right">
 
-          <p>de resereve</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-person-add"></i>
-        </div>
+        <li> <button class="btn btn-success" routerLink="/statistique">Consulter le stock</button></li>
+      </ol>
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-exclamation-triangle"></i>
+          Un don peut sauver 3 vie
+        </h3>
       </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-      <!-- small box -->
-      <div class="small-box bg-danger">
-        <div class="inner">
-          <h3>18 ans age minimum</h3>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div>
+          <div class="article-content">
 
-          <p>4 semaines de delai entre deux dons de plaquetes</p>
+
+            <div class="well">
+
+            </div>
+            <p>Secours d’urgence, interventions chirurgicales, maladies du sang, cancers… Les besoins en produits sanguins sont quotidiens et ont fortement augmenté au cours des quinze dernières années.</p>
+            <p>Aujourd’hui, il n’existe aucun traitement ni médicament de synthèse capable de se substituer au sang humain et aux produits sanguins labiles (PSL), issus des dons de sang.<br>
+              <strong>Cet acte volontaire et bénévole est donc irremplaçable.</strong><br>
+              Le don de sang est la forme de don la plus courante. Il permet de prélever en même temps tous les composants du sang – globules rouges, plasma et plaquettes – qui sont ensuite séparés.</p>
+            <p>&nbsp;</p>
+            <p><strong><img loading="lazy" class="alignright wp-image-17616 size-citeo-logo" src="https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-190x190.jpg" alt="" width="190" height="190" srcset="https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-190x190.jpg 190w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-400x400.jpg 400w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-380x380.jpg 380w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-200x200.jpg 200w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-300x300.jpg 300w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-100x100.jpg 100w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-250x250.jpg 250w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-70x70.jpg 70w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur.jpg 600w" sizes="(max-width: 190px) 100vw, 190px">Comment se passe le don de sang ?</strong></p>
+            <ul>
+              <li><strong>Principe</strong> : on prélève de 420 à 480 ml de sang, en fonction du poids du donneur.</li>
+              <li><strong>Durée</strong> : l’acte lui-même dure 8 à 10 minutes. Si l’on ajoute le temps de l’entretien prédon, puis le temps de repos et de collation qui suit le prélèvement, le don de sang prend environ 45 minutes.</li>
+              <li><strong>Délai</strong> : il faut respecter un délai d’au moins 8 semaines entre 2 dons de sang total.</li>
+              <li><strong>Fréquence</strong> : une femme peut donner son sang maximum 4 fois par an, un homme 6 fois par an.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p><strong>Qui peut donner ?</strong></p>
+            <ul>
+              <li>Toute personne en bonne santé, âgée de 18 à 70 ans, ne faisant pas l’objet d’une mesure de protection légale (tutelle…) et reconnue apte à l’issue de l’entretien prédon peut donner son sang.</li>
+              <li>Les donneurs de groupe O négatif (O-) sont particulièrement recherchés car leurs globules rouges peuvent être transfusés à&nbsp;tous les patients. Mais les donneurs de tout groupe sanguin sont les bienvenus.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p><strong>Important :</strong></p>
+            <ul>
+              <li>Ne pas venir à jeun.</li>
+              <li>Avoir une pièce d’identité.</li>
+              <li>Bien lire les contre-indications principales au don du sang, pour éviter d’attendre pour rien :&nbsp;<a href="https://dondesang.efs.sante.fr/qui-peut-donner-les-contre-indications/tout-savoir-sur-les-contre-indications">https://dondesang.efs.sante.fr</a></li>
+            </ul>
+
+
+
+
+
+          </div>
         </div>
-        <div class="icon">
-          <i class="ion ion-pie-graph"></i>
-        </div>
-        
       </div>
+      <!-- /.card-body -->
     </div>
-    <!-- ./col -->
+    <!-- /.card -->
   </div>
- <!-- /.row -->
- <!-- END ALERTS AND CALLOUTS -->
+  <!-- /.col -->
+
+  <div class="col-md-6" dir="rtl" lang="ar"  xml:lang="ar" CONTENT="ar">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-exclamation-triangle"></i>
+          تبرع واحد يمكن أن ينقذ 3 أرواح
+        </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div dir="rtl" lang="ar"  xml:lang="ar">
+          <div class="well">
+
+          </div>
+          <p >الإغاثة في حالات الطوارئ ، والتدخلات الجراحية ، وأمراض الدم ، والسرطان ... الحاجة إلى منتجات الدم تزداد بشكل يومي وتزايدت بشكل حاد خلال الخمسة عشر عامًا الماضية.</p>
+          <p>اليوم ، لا يوجد علاج أو دواء اصطناعي قادر على استبدال دم الإنسان ومشتقاته (LBPs) المشتقة من الدم المتبرع به.<br>
+            <strong>لذلك لا يمكن الاستغناء عن هذا العمل التطوعي والتطوعي.</strong><br>
+            الشكل الأكثر شيوعًا للتبرع هو التبرع بالدم. يسمح بتجميع جميع مكونات الدم - خلايا الدم الحمراء والبلازما والصفائح الدموية - في نفس الوقت ، ثم يتم فصلها بعد ذلك.</p>
+          <p>&nbsp;</p>
+          <p><strong><img loading="lazy" class="alignright wp-image-17616 size-citeo-logo" src="https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-190x190.jpg" alt="" width="190" height="190" srcset="https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-190x190.jpg 190w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-400x400.jpg 400w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-380x380.jpg 380w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-200x200.jpg 200w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-300x300.jpg 300w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-100x100.jpg 100w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-250x250.jpg 250w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur-70x70.jpg 70w, https://www.mairie-bailly.fr/wp-content/uploads/2018/05/Don-du-sang_mains-coeur.jpg 600w" sizes="(max-width: 190px) 100vw, 190px">كيفية التبرع بالدم؟</strong></p>
+          <ul>
+            <li><strong>المبدأ</strong> :يتم أخذ 420 إلى 480 مل من الدم اعتمادًا على وزن المتبرع.</li>
+            <li><strong>المدة</strong> : الفعل نفسه يستمر من 8 إلى 10 دقائق. إذا أضفت وقتًا للمقابلة السابقة للجلسة ، ثم وقت الراحة وتناول وجبة خفيفة بعد الجمع ، يستغرق التبرع بالدم حوالي 45 دقيقة.</li>
+            <li><strong>الموعد النهائي</strong> : يجب مراعاة فترة لا تقل عن 8 أسابيع بين تبرعين بالدم الكامل.</li>
+            <li><strong>التكرار</strong> : يمكن للمرأة التبرع بالدم 4 مرات في السنة كحد أقصى للرجل 6 مرات في السنة.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p ><strong dir="rtl">من يمكنه التبرع؟</strong></p>
+          <ul>
+            <li>يمكن لأي شخص يتمتع بصحة جيدة ، تتراوح أعمارهم بين 18 و 70 عامًا ، ولا يخضع لتدابير الحماية القانونية (الوصاية ، وما إلى ذلك) والمعترف به على أنه لائق بعد المقابلة السابقة للجلسة التبرع بالدم.</li>
+            <li>يتم البحث عن المتبرعين من المجموعة O السلبية (O-) بشكل خاص لأنه يمكن نقل خلايا الدم الحمراء لديهم في جميع المرضى. لكن المتبرعين من أي فصيلة دم مرحب بهم.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p><strong>هام :</strong></p>
+          <ul>
+            <li>لا تأتي على معدة فارغة.</li>
+            <li>لديك هوية.</li>
+            <li> اقرأ الموانع الرئيسية للتبرع بالدم ، لتجنب انتظار أي شيء:&nbsp;
+              <a href="https://dondesang.efs.sante.fr/qui-peut-donner-les-contre-indications/tout-savoir-sur-les-contre-indications">https://dondesang.efs.sante.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-exclamation-triangle"></i>
+          Un don peut sauver 3 vie
+        </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div>
+          <img src="assets/al_hoceima.jpeg">
+        </div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+
+  <div class="col-md-6">
+    <div class="card card-default">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fas fa-exclamation-triangle"></i>
+          Alerts
+        </h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div>
+          <img src="assets/don-sang.jpeg">
+        </div>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+</div>
+
+<!-- END ALERTS AND CALLOUTS -->
